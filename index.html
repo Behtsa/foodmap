@@ -31,19 +31,55 @@
 		<section class="row">
 			<h2 class="col-xs-12 foodmap-color text-center">Comida cerca de ti</h2>
 		</section>
+		<!--Area de filtrado-->
 		<section class="row">
-			<input type="text" class="col-xs-9 col-xs-offset-1 placeholder" placeholder="comida mexicana">
-			<button type="button" class="btn-height col-xs-1" aria-label="Left Align">
+			<input id="type" type="text" class="col-xs-9 col-xs-offset-1 placeholder" placeholder="filtrar restaurantes">
+			<button id="search" type="button" class="btn-height col-xs-1" aria-label="Left Align">
   			<span class="glyphicon glyphicon-search search white" aria-hidden="true"></span>
 			</button>
 		</section>
-		<section class="row">
-			
+		<!--pintar img dinamicamente-->
+		<section class="img-food row">
+			<a class="col-xs-5 col-xs-offset-1 btn" href="#modal1" data-toggle="modal"><img id="first" src="" class="img-responsive"></a>
 		</section>
+		<!--Modal-->
+		<div id="modal1" class="modal fade" tabindex="-1" role="dialog">
+  		<div class="modal-dialog" role="document">
+    		<div class="modal-content">
+    			<div class="modal_header">
+        		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        	</div>
+      		<div class="modal-body">
+      			<div class="row">
+      				<h2 class="col-xs-12 modal-title text-center" id="name">Nombre restaurante</h2>
+      			</div>
+      			<div class="row">
+	        		<div class="col-xs-8 col-xs-offset-2" id="restaurant_map"></div>
+      			</div>
+      			<div class="row">
+      				<p class="col-xs-10 col-xs-offset-1 foodmap-color text-center" id="phrase">Tacos para todos los gustos</p>
+      			</div>
+      			<div class="row">
+      				<address class="col-xs-5 col-xs-offset-1">
+  							<p>1355 Market Street, Suite 900</p>
+  							<p>San Francisco, CA 94103</p>
+							</address>
+							<div class="col-xs-5">
+								<p>Rango de precios</p>
+								<p>Servicio a domicilio</p>
+							</div>
+      			</div>
+      			<div class="row text-center">
+        			<button type="button" class="btn btn-warning">Pedir ahora</button>
+        		</div>
+    		</div><!-- /.modal-content -->
+  		</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+
 	</div>
+	<script type="text/javascript" src="js/data.js"></script>
 	<script type="text/javascript" src="js/app.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGy0rwzqbnCbFVAH7s0XuOccWPkOS7jm0&callback=myMap" type="text/javascript"></script>
 </body>
 </html>

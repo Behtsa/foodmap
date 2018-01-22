@@ -56,3 +56,16 @@ hr {
 	height: 22px;
 	padding-right: 1px;
 }
+
+.img-food {
+	margin-top: 10%;
+}
+
+#restaurant_map {
+	height: 200px;
+	border: 1px solid black;
+}
+
+.modal_header {
+	padding: 15px;
+}
