@@ -41,6 +41,12 @@
 		<!--pintar img dinamicamente-->
 		<section class="img-food row">
 			<a class="col-xs-5 col-xs-offset-1 btn" href="#modal1" data-toggle="modal"><img id="first" src="" class="img-responsive"></a>
+			<a class="col-xs-5 btn" href="#modal1" data-toggle="modal"><img id="second" src="" class="img-responsive"></a>
+		</section>
+		<section class="img-food row">
+			<a class="col-xs-3 col-xs-offset-1 btn" href="#modal1" data-toggle="modal"><img id="third" src="" class="img-responsive"></a>
+			<a class="col-xs-4 btn" href="#modal1" data-toggle="modal"><img id="fourth" src="" class="img-responsive"></a>
+			<a class="col-xs-3 btn" href="#modal1" data-toggle="modal"><img id="fifth" src="" class="img-responsive"></a>
 		</section>
 		<!--Modal-->
 		<div id="modal1" class="modal fade" tabindex="-1" role="dialog">
@@ -51,21 +57,20 @@
         	</div>
       		<div class="modal-body">
       			<div class="row">
-      				<h2 class="col-xs-12 modal-title text-center" id="name">Nombre restaurante</h2>
+      				<h2 class="col-xs-12 modal-title text-center" id="name"></h2>
       			</div>
       			<div class="row">
 	        		<div class="col-xs-8 col-xs-offset-2" id="restaurant_map"></div>
       			</div>
       			<div class="row">
-      				<p class="col-xs-10 col-xs-offset-1 foodmap-color text-center" id="phrase">Tacos para todos los gustos</p>
+      				<p class="col-xs-10 col-xs-offset-1 foodmap-color text-center" id="phrase"></p>
       			</div>
       			<div class="row">
       				<address class="col-xs-5 col-xs-offset-1">
-  							<p>1355 Market Street, Suite 900</p>
-  							<p>San Francisco, CA 94103</p>
+  							<p id="address"></p>
 							</address>
 							<div class="col-xs-5">
-								<p>Rango de precios</p>
+								<p id="rates"></p>
 								<p>Servicio a domicilio</p>
 							</div>
       			</div>

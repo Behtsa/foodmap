@@ -3,8 +3,8 @@
 using setTimeOut*/
 $(function(){
    setTimeout(function() {
-      $('#splash').fadeOut(100);
-   }, 1000);
+      $('#splash').fadeOut(1000);
+   }, 2000);
 });
 
 /*google map**/
@@ -17,16 +17,16 @@ function myMap() {
 var map = new google.maps.Map(document.getElementById("map"), mapOptions);
 }
 
-/*si escriben mexicana debe mostrar resaurantes de commex
-1.- se debe guardar el valor del inout
-2. se debe comparar con un obj del data*/
+/*adding functionality on the general page*/
 var $type = $("#type");
 var $search = $("#search");
 
+/*this function toggles the event of the search button*/
 function init() {
 	$search.click(getType);
 }
 
+/*this function filter retaurnts per type*/
 function getType() {
 	var $value = $type.val();
 	var $restaurants = data[$value]['restaurants'];
@@ -34,11 +34,27 @@ function getType() {
 }
 
 function printRestaurants($restaurants) {
+	var $restaurant = $restaurants;
 	/*iterate through the array to show the images*/
-	console.log($restaurants[0].photo);
-	$("#first").attr("src", $restaurants[0].photo);
+	// console.log($ids[0]);
+	// console.log($restaurants[0].photo);
+	// $($ids[0]).attr("src", $restaurants[0].photo);
+	var $ids = ["#first", "#second", "#third", "#fourth", "#fifth"];
+	for(var i= 0; i < $ids.length; i++) {
+		$($ids[i]).attr("src", $restaurants[i].photo);
+	}
+	printModalInfo($restaurant);
 }
 
+function printModalInfo($restaurants) {
+	$('a').click(function() {
+		console.log($restaurants[0].name);
+		$("#name").html($restaurants[0].name);
+		$("#phrase").html($restaurants[0].phrase);
+		$("#address").html($restaurants[0].address);
+		$("#rates").html($restaurants[0].rates);
+	})
+}
 
 
 
